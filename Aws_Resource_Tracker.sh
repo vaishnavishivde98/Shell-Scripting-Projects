@@ -18,11 +18,9 @@ echo "===== Listing AWS EC2 Instances ====="
 aws ec2 describe-instances
 
 echo "===== Listing AWS Lambda Functions ====="
-echo ("Listing AWS Lambda")
 aws lambda list-functions
 
 echo "===== Listing AWS IAM Users ====="
-echo ("Listing AWS IAM Users")
 echo iam list-users
 
 echo "===== Report Completed ====="
