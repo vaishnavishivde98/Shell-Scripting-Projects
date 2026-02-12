@@ -10,17 +10,20 @@
 set -x # enable debug mode
 
 # Listing AWS S3 
-echo ("Listing AWS S3")
+echo "===== Listing AWS S3 Buckets ====="
 aws s3 ls
 
 # Listing AWS EC2  
-echo ("Listing AWS EC2")
+echo "===== Listing AWS EC2 Instances ====="
 aws ec2 describe-instances
 
-# Listing AWS Lambda 
+echo "===== Listing AWS Lambda Functions ====="
 echo ("Listing AWS Lambda")
 aws lambda list-functions
 
-# Listing AWS IAM Users 
+echo "===== Listing AWS IAM Users ====="
 echo ("Listing AWS IAM Users")
 echo iam list-users
+
+echo "===== Report Completed ====="
+
