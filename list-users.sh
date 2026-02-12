@@ -1,5 +1,11 @@
 #!/bin/bash
 
+##########################################################################
+# Author: Vaishnavi Shivde
+# Version: V1.0
+# This Script will list the github repo users via github API integration.
+##########################################################################
+
 # GitHub API URL
 API_URL="https://api.github.com"
 
@@ -10,6 +16,13 @@ TOKEN=$token
 # User and Repository information
 REPO_OWNER=$1
 REPO_NAME=$2
+
+# Check if the required number of arguments are passed
+if [ $# -ne 2 ]; then
+	echo "Usage: ./list-users.sh <REPO_OWNER> <REPO_NAME>"
+	echo "Example: ./list-users.sh vaishnavishivde98 Shell-Scripting-Projects"
+	exit 1
+fi
 
 # Function to make a GET request to the GitHub API
 function github_api_get {
